@@ -1,0 +1,361 @@
+ <!DOCTYPE html>
+
+<html><head>
+<title>Zhang Jinghuai</title>
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+
+<style type="text/css">
+ @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic");
+
+
+    body
+    {
+    font-family:"Roboto",Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5;font-weight:300;
+        background-color : #7BBFEA;
+    }
+        .content
+    {
+            width : 900px;
+            padding : 25px 30px;
+            margin : 25px auto;
+            background-color : #fff;
+            box-shadow: 0px 0px 10px #999;
+            border-radius: 15px;
+    }
+    table
+    {
+        padding: 5px;
+    }
+    
+    table.pub_table,td.pub_td1,td.pub_td2
+    {
+        padding: 8px;
+        width: 850px;
+        border-collapse: separate;
+        border-spacing: 15px;
+        margin-top: -5px;
+    }
+
+    td.pub_td1
+    {
+        width:50px;
+    }
+    td.pub_td1 img
+    {
+        height:120px;
+        width: 160px;
+    }
+    
+    div#container
+    {
+        margin-left: auto;
+        margin-right: auto;
+        width: 820px;
+        text-align: left;
+        position: relative;
+        background-color: #FFF;
+    }
+    div#DocInfo
+    {
+        color: #1367a7;
+        height: 158px;
+        margin-left: 20px;
+    }
+    h4,h3,h2,h1
+    {
+        color: #3B3B3B;
+    }
+    h1
+    {
+        color: #2A5CAA;
+        font-style: italic;
+    }
+    h2
+    {
+        font-size:130%;
+    }
+    p
+    {
+        color: #5B5B5B;
+        margin-bottom: 50px;
+    }
+    p.caption
+    {
+        color: #9B9B9B;
+        text-align: left;
+        width: 600px;
+    }
+    p.caption2
+    {
+        color: #9B9B9B;
+        text-align: left;
+        width: 800px;
+    }
+    #header_img
+    {
+        position: absolute;
+        top: 0px; right: 0px;
+    }
+    a:link,a:visited
+    {
+        color: #1367a7;
+        text-decoration: none;
+    }
+
+    #mit_logo {
+        position: absolute;
+        left: 646px;
+        top: 14px;
+        width: 200px;
+        height: 20px;
+    }
+   
+    table.pub_table tr {
+        outline: thin dotted #666666;
+    }
+    .papericon {
+        border-radius: 8px;
+        -moz-box-shadow: 3px 3px 6px #888;
+        -webkit-box-shadow: 3px 3px 6px #888;
+        box-shadow: 3px 3px 6px #888;
+        width: 180px;
+    margin-top:5px;
+    margin-left:5px;
+    margin-bottom:5px;
+    }
+
+     .papericon_blank {
+
+        width: 160px;
+    margin-top:5px;
+    margin-left:5px;
+    margin-bottom:5px;
+    }
+
+    .media {
+    outline: thin dotted #666666;
+     margin-bottom: 15px;
+    margin-left:10px;
+    }
+    .media-body {
+    margin-top:5px;
+    padding-left:20px;
+    }
+    .instructorphoto img {
+      width: 150px;
+      border-radius: 0px;
+      margin-bottom: 30px;
+    }
+
+
+.papers-selected h5, .papers-selected h4 { display : none; }
+.papers-selected .publication { display : none; }
+.paperhi-only { display : none; }
+.papers-selected .paperhi { display : flex; }
+.papers-selected .paperlo { display : none; }
+
+.hidden>div {
+    display:none;
+}
+
+.visible>div {
+    display:block;
+}
+</style>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23931362-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23931362-2');
+</script>
+
+<script type="text/javascript">
+    var myPix = new Array("image/intro.png")
+    function choosePic() {
+        var randomNum = Math.floor(Math.random() * myPix.length);
+        document.getElementById("myPicture").src = myPix[randomNum];
+    };
+</script>
+
+<script>
+$(document).ready(function() {
+  $('.paperlo button').click(function() {
+     $('.papers-container').addClass('papers-selected');
+  });
+  $('.paperhi button').click(function() {
+     $('.papers-container').removeClass('papers-selected');
+  });
+
+
+    $('.text_container').addClass("hidden");
+
+    $('.text_container').click(function() {
+        var $this = $(this);
+
+        if ($this.hasClass("hidden")) {
+            $(this).removeClass("hidden").addClass("visible");
+            $(this).removeClass("papericon");
+        } else {
+            $(this).removeClass("visible").addClass("hidden");
+        }
+    });
+
+
+});
+</script>
+
+</head>
+
+
+<body>
+<div class="content">
+    <div id="container">
+
+    <table>
+    <tbody><tr>
+    <td><div class="instructorphoto">
+        <img id="myPicture" src="image/me.jpeg" style="float:left;">
+    </div></td>
+    <script>choosePic();</script>
+    <td>
+    <div id="DocInfo">
+        <h1>Zhang Jinghuai</h1>
+        Duke University.<br>
+        Email: 728970038zjh@gmail.com<br>
+        <a href="assets/Zhang Jinghuai CV.pdf">CV</a> &bull; <a href="https://github.com/jzhang538">Github</a> &bull; <a href="https://scholar.google.com/citations?hl=en&view_op=list_works&gmla=AJsN-F4IwhvoEXttdf54mjzAWmeQDcRYlfn1Js-8_auP1f6IPODQueTvqTFnI7OyfpAeskdzkdTptc8abIB9iQ1IZXY5Q8WiTtxns0dgN7cSM1-3BgVYfcI&user=dAVQzhkAAAAJ">Scholar</a> <br>
+    </div><br>
+    <!--
+    <div id="mit_logo">
+        <a href="http://www.mit.edu"><img src="image/mit.gif" height="170px" class="papericon" /></a>
+    </div>
+    -->
+    </td>
+    </tr>
+    </tbody></table>
+    <br>
+
+
+    <h2>Introduction</h2>
+    <ul>
+        <li> Hi, this is Jinghuai Zhang, a graduate student at Duke University. I study machine learning, cybersecurity and data privacy under the supervision of <a href="http://people.duke.edu/~zg70/">Prof. Zhenqiang Gong Neli</a>, with a recent focus on the intersections between security and machine learning.
+        </li>
+        <li>I earned my Bachelar Degree in Computer Science from City University of Hong Kong in July 2020. After that, I spent my invaluable year working at Sensetime Research. I was fortunate to work under the supervision of <a href="http://bzhou.ie.cuhk.edu.hk/">Prof. Bolei Zhou</a> and <a href="https://www.cs.cityu.edu.hk/~jianwang/">Prof. Jianping Wang.</a>
+        </li>
+        <li> Before graduate study, I was widely involved in research topics including style transfer, motion prediction, object detection/tracking and self-supervised learning.
+        </li>
+    <!--
+    <li>Recent work on interpreting deep generative models: <a href="https://shenyujun.github.io/InterFaceGAN/">InterFaceGAN</a>, <a href="https://ceyuan.me/SemanticHierarchyEmerge/">Generative Hierarchy</a>, <a href="http://ganpaint.io/">GANPaint</a>.</li>
+    <li>Recent work on machine decision: <a href="https://sites.google.com/view/neurips2019pchid">Policy Continuation</a>, <a href="https://sites.google.com/view/decision-module/">Driving Imitation</a>, <a href="https://view-parsing-network.github.io/">Cross-view Segmentation</a>.</li>
+   
+   <li> My representative work includes the large-scale scene benchmarks <a href="http://places2.csail.mit.edu">Places Database and Places-CNN</a>, <a href="http://groups.csail.mit.edu/vision/datasets/ADE20K/">ADE20K Dataset</a>, as well as neural network interpretation methods <a href="http://cnnlocalization.csail.mit.edu/">Class Activation Mapping (CAM)</a> and <a href="http://netdissect.csail.mit.edu/">Network Dissection</a>. Recently I investigate video scene understanding, with
+     work <a href="http://relation.csail.mit.edu/">Temporal Relational Reasoning</a> and <a href="http://moments.csail.mit.edu/">Moments in Time</a>.</li>
+-->
+    </ul>
+    
+<!--    <h2>News</h2>-->
+<!--    <ul>-->
+<!--        <li>2021/02/02: <a href="https://interpretablevision.github.io/">4th Tutorial on Interpretable Machine Learning</a> will be organized at CVPR'21. Stay tuned.</li>-->
+
+<!--
+        <li>2020/07/29: <a href="https://slideslive.com/38930761/interpreting-and-leveraging-the-latent-semantics-in-gans">Invited talk on Interpreting GANs</a> at <a href="http://interpretable-ml.org/icml2020workshop/">XXAI Workshop at ICML'20</a>.
+        <li>2020/06/13: <a href="https://interpretablevision.github.io/">3rd Tutorial on Interpretable Machine Learning</a> is organized at CVPR'20 with videos available.</li>
+  
+ 
+        
+            <li>2020/04/14: <a href="https://genforce.github.io/">GenForce</a> is online, our new research initiative on generative modeling.</li>
+            <li>2020/03/31: For fun I initiated an educational channel <a href="https://github.com/zhoubolei/introRL">Intro to Reinforcement Learning</a> with videos and slides.</li>
+            <li>2019/12/03: Fortunate to be among <a href="https://www.innovatorsunder35.com/regions/asiapacific/">MIT Tech Review's Innovators Under 35 in Asia Pacific</a>.</li>
+                    <li>2020/04/14: <a href="https://decisionforce.github.io/TPN/">Temporal Pyramid Network(TPN)</a> achieves huge improvement over <a href="http://relation.csail.mit.edu/">TRN</a>, with code.</li>
+
+        <li>2019/10/29: 1 paper on reinforcement learning is accepted to NeurIPS'19 as spotlight. See paper below. </li>
+    <li>2019/10/28: <a href="https://interpretablevision.github.io/">2nd Tutorial on Interpretable Machine Learning for Computer Vision</a> went well. Slides released. </li>
+    <li>2019/09/03: 3 papers are accepted to ICCV'19 (2 orals + 1 poster). See the papers below.</li>
+    <li>2019/07/01: New <a href="publication/siggraph19_preprint_small.pdf">SIGGRAPH'19 paper</a> on semantic image manipulation. Try the <a href="http://ganpaint.io/demo/">live demo</a>!</li>
+    
+    <li>[2019/07/01] New arXiv preprint on <a href="https://view-parsing-network.github.io/">cross-view semantic segmentation</a>.</li>
+        <li>[2019/04/26] Talks at <a href="http://ganocracy.csail.mit.edu/">MIT GANocracy Workshop</a>, <a href="http://bzhou.ie.cuhk.edu.hk/cvpr19_tutorial/">CVPR'19 Tutorial on Tectures, Objects and Scenes</a>, <a href="https://amlcvpr2019.github.io/">CVPR'19 Adversarial Machine Learning Workshop</a>, and <a href="https://lidchallenge.github.io/">CVPR'19 Learning from Imperfect Data (LID) workshop</a>.</li>
+    
+
+    <li>[2019/03/05] Welcome to <a href="https://explainai.net/">CVPR'19 Workshop on Explainable AI</a>.
+    <li>[2019/01/09] I am teaching <a href="https://course.ie.cuhk.edu.hk/~ierg6130/">IERG6130 Course on Reinforcement Learning</a>.</li>
+    
+     <li>[2018/09/14] <a href="http://relation.csail.mit.edu">Temporal Relation Network</a> is covered by <a href="http://news.mit.edu/2018/machine-learning-video-activity-recognition-0914">MIT News</a> as Today's Spotlight.</a>
+
+        <li>[2018/07/03] The videos for CVPR'18 Tutorial on Interpretable Machine Learning are <a href="https://interpretablevision.github.io/">available</a>.</li>
+    
+        <li>[2018/05/04] I defended my Ph.D. thesis. Defense talk titled Interpretable Representation Learning for Visual Intelligence is available on <a href="https://www.youtube.com/watch?v=J7Zz_33ZeJc">Youtube</a> or <a href="http://people.csail.mit.edu/bzhou/bolei_defense.mp4">Download</a>.</li>
+        <li>[2018/04/09] PyTorch implementation of scene parsing networks trained on ADE20K is <a href="https://github.com/CSAILVision/semantic-segmentation-pytorch">released</a>.</a></li>
+        <li>[2017/12/09] I will organize the <a href="https://interpretablevision.github.io/">Tutorial on Interpretable Machine Learning at CVPR'18</a>.</li>
+        <li>[2017/12/03] <a href="http://moments.csail.mit.edu/">Moments in Time Dataset</a> with 1 million videos from 339 actions is online! </li>
+        <li>[2017/12/03] Latest work on <a href="http://relation.csail.mit.edu/">temporal reasoning</a> in videos. Relation is all you need. </li>
+        <li>[2017/12/02] I am invited as a panelist for the <a href="http://interpretable.ml/">NIPS'17 Interpretable Machine Learning Symposium</a>.</li>
+        <li>[2017/11/15] <a href="http://cnnlocalization.csail.mit.edu/">Class Activation Mapping</a> is used to <a href="https://news.stanford.edu/2017/11/15/algorithm-outperforms-radiologists-diagnosing-pneumonia/?linkId=44774396&linkId=44811912">interpret lung disease diagnosis</a> by researchers at Stanford.</li>
+        <li>[2017/09/04] <a href="http://places2.csail.mit.edu/demo.html">Demo of Places365-CNN</a> is updated, which could predict the scene categories, attributes, and the class activation map together. <a href="https://github.com/CSAILVision/places365/blob/master/run_placesCNN_unified.py">Source code in PyTorch</a> is available.</li>
+        <li>[2017/07/06] An invited talk at <a href="https://2017.icml.cc/">ICML'17</a> <a href="http://icmlviz.github.io/">Workshop on Visualization for Deep Learning</a> about interpreting deep visual representation. Here is the <a href="http://people.csail.mit.edu/bzhou/ppt/presentation_ICML_workshop.pdf">slide</a>. </li>
+        <li>[2017/07/01] <a href="http://news.mit.edu/2017/inner-workings-neural-networks-visual-data-0630">MIT News</a> and <a href="https://techcrunch.com/2017/06/30/mit-csail-research-offers-a-fully-automated-way-to-peer-inside-neural-nets/">Techcrunch</a> cover our Network Dissection work. </li>
+        <li>[2017/06/20] I am organizing the <a href="https://places-coco2017.github.io/">Joint Workshop for COCO and Places Challenge at ICCV'17</a>.</li>
+        -->
+    </ul>
+
+
+<div class="papers-container papers-selected">
+<!--    <h5 class="paperlo">All Publications<button type="button" class="ml-3 btn btn-light"> Show selected</button></h5>-->
+<!--    <h5 class="paperhi paperhi-only">Selected Projects<button type="button" class="ml-3 btn btn-light"> Show all</button></h5>-->
+<!--    <h5 class="pt-2 pb-1">2021</h5>-->
+    <h2>Previous Works</h2>
+    <div class="publication media paperhi">
+           <img src="image/cover_mmTrans.png" class="papericon">
+           <div class="media-body"><b>Multimodal Motion Prediction with Stacked Transformer</b><br>
+           Yicheng Liu*, <b>Jinghuai Zhang*</b>, Liangji Fang, Qinhong Jiang, Bolei Zhou
+           <br>(*co-first authors)
+           <br>CVPR 2021<br>
+           [<a href="https://arxiv.org/pdf/2103.11624.pdf">PDF</a>]
+           [<a href="https://decisionforce.github.io/mmTransformer/">Webpage</a>]
+           [<a href="https://github.com/decisionforce/mmTransformer/">Code</a>]
+    </div></div>
+
+    <div class="publication media paperhi">
+           <img src="image/cover_SBMP.png" class="papericon">
+           <div class="media-body"><b>A Novel Learning Framework for Sampling-Based Motion Planning in Autonomous Driving</b><br>
+           Yifan Zhang*, <b>Jinghuai Zhang*</b>, Jindi Zhang, Jianping Wang, Kejie Lu, Jeff Hong
+           <br>(*co-first authors)
+           <br>AAAI 2020, Oral<br>
+           [<a href="https://ojs.aaai.org//index.php/AAAI/article/view/5473">PDF</a>]
+           [<a href="https://github.com/Yifanny/Integrate-Algorithmic-Sampling-based-Motion-Planning-with-Learning">Code</a>]
+    </div></div>
+    
+    <div class="publication media paperhi">
+           <img src="image/cover_StyleMixer.png" class="papericon">
+           <div class="media-body"><b>Style Mixer: Semantic-aware Multi-Style Transfer Network</b><br>
+           Zixuan Huang*, <b>Jinghuai Zhang*</b>, Jing Liao
+           <br>(*co-first authors)
+           <br>Pacific Graphics 2019<br>
+           [<a href="https://arxiv.org/pdf/1910.13093.pdf">PDF</a>]
+           [<a href="https://github.com/jzhang538/Official-implementation-StyleMixer/">Code</a>]
+    </div></div>
+</div>
+    <h2>Honors</h2>
+    <div>
+        <ul>
+            <li>HKSAR Government Scholarship Fund Academic Award in 2018-2019 and 2019-2020</li>
+            <li>Hong Kong, China-Asia-Pacific Economic Cooperation Scholarship</li>
+            <li>Hong Kong Computer Society Student Sponsorship</li>
+            <li>Department of Computer Science Outstanding Student Scholarships</li>
+            <li>First class honor graduate from City University of Hong Kong</li>
+            <li>Dean's List</li>
+        </ul>
+    </div>
+    <h2>Personal</h2>
+    <div>
+        I love playing the guitar in my spare time.
+        Also, I was the record-holder of 3000 metres race in my middle school.
+    </div>
+</div>
+</div>
+</body></html>
